@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 代码就是脑子思维展示
+        //写一个小游戏 猜数字
+        function getRandom(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        var num1 = getRandom(1, 10);
+
+
+        // while循环出不去
+        // while (true) {
+        //     for (var i = 10; i > 0; i--) {
+        //         if (i == 0 && num2 == num1) {
+        //             alert('恭喜猜对!最后一次居然对了');
+        //             break;
+        //         } else if (i > 0) {
+        //             if (num2 > num1) {
+        //                 alert("你猜大了!你还有" + i + "次机会");
+
+        //             }
+        //             if (num1 == num2) {
+        //                 aleart('恭喜猜对');
+        //                 break;
+        //             }
+        //             if (num1 > num2) {
+        //                 aleart("你猜小了!你还有" + i + "次机会")
+        //             }
+        //         }else{
+        //             alert('不好意思机会用完');
+        //             break;
+        //         }
+        //     }
+        // }
+        var i = 1;
+        while (true) {
+            alert('游戏开始! 猜数字 1-10')
+            var num2 = prompt('请输入你猜的数字')
+           if(i>10){
+               alert('次数用完');
+               break;
+           }else{
+            if (num2 > num1) {
+                alert('猜大了');
+                i++;
+            } else if (num2 < num1) {
+                alert('猜小了');
+                i++;
+            } else {
+                alert('猜对了')
+                break;
+            }
+           }
+
+        }
+        //通过代码演示 break直接跳出循环
+    </script>
+</body>
+
+</html>

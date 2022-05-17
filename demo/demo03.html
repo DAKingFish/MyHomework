@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 代码就是脑子思维展示
+        //写一个小游戏 猜数字
+        function getRandom(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        var num1 = getRandom(1, 10);
+
+
+        //while循环出不去
+        var i = 10
+        while (true) {
+            alert('游戏开始!猜数字 在1-10中')
+            var num2 = prompt('输入你猜的数字')
+            if (i == 0 && num2 == num1) {
+                alert('恭喜猜对!最后一次居然对了');
+                break;
+            } else if (i > 0) {
+                if (num2 > num1) {
+                    i--;
+                    if (i == 0) {
+                        alert('不好意思机会用完');
+                        break;
+                    }
+                    alert("你猜大了!你还有" + i + "次机会");
+
+                }
+                if (num1 == num2) {
+                    alert('恭喜猜对');
+                    break;
+                }
+                if (num1 > num2) {
+                    i--;
+                    if (i == 0) {
+                        alert('不好意思机会用完');
+                        break;
+                    }
+                    alert("你猜小了!你还有" + i + "次机会")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

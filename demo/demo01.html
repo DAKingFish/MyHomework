@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 代码不就是将脑子的思想 在电脑上实现
+        var str = "";
+        for (var i = 9; i > 0; i--) {
+            for (var j = 1; j <= i; j++) {
+                // console.log(j+"*"+i+"="+(j*i))
+                str += (j + "*" + i + "=" + (j * i) + " ")
+            }
+            str += '\n';
+        }
+        console.log(str)
+        var str1 = "";
+        //parseFloat() 将字符串解析浮点数
+        var n = parseFloat(prompt('请输入最大一行的星星数量'))
+        // for(var m=1;m<=n;m++){
+        //     for(var l=m;l>0;l--){
+        //         str1 +="*"+" "
+        //     }
+        //     str1 +='\n'
+        // }
+        for (var m = n; m >= 0; m--) {
+            for (var l = m; l > 0; l--) {
+                str1 += "*" + " "
+            }
+            str1 += '\n'
+        }
+        console.log(str1)
+        // while循环
+        var message = prompt('你爱我?')
+        while (message !== '我爱你') {
+            message = prompt('你爱我?')
+        }
+    </script>
+</body>
+
+</html>
